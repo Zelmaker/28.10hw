@@ -1,8 +1,9 @@
 def iss(x,y):
-    print('id первой переменной: ', id(x))
-    print('id второй переменной: ', id(y))
-    print(x)
-    print(y)
+    print('id x: ', id(x))
+    print('id y: ', id(y))
+    print(f'значение x = {x}')
+    print(f'значение y = {y}')
+    print(f'идентичность по объекту:{x is y}\nпо значению:{id(x)== id(y)}')
 
 
 print('1')

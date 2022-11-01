@@ -19,19 +19,20 @@ class Int:
     def __add__(self, other):
         if not isinstance(other, str):
             raise TypeError
-        return self.make_sum(other)
-
-    def make_sum(self, other):
         if other not in self.dict:
-            raise TypeError("TypeError: справа от знака "+" непонятный текст. Если что, я понимаю текстом цифры с 1 по 5.")
-        return self.value+self.dict[other]
+            raise TypeError(
+                "TypeError: справа от знака " + " непонятный текст. Если что, я понимаю текстом цифры с 1 по 5.")
+        return self.value + self.dict[other]
+    #
+    # def make_sum(self, other):
+
 
 
 # использование
 x = Int(5)
-# print(x + '5')  # 10
-# print(x + 'один')  # 6
-# print(x + 'пять')  # 10
-print(x + 'шесть')  # TypeError: справа от знака "+" непонятный текст. Если что, я понимаю текстом цифры с 1 по 5.
-print(x + 'a')  # TypeError: справа от знака "+" непонятный текст. Если что, я понимаю текстом цифры с 1 по 5.
-print(x + (1,))  # TypeError: unsupported operand type(s) for +: 'Int' and 'tuple'
+print(x + '5')  # 10
+print(x + 'один')  # 6
+print(x + 'пять')  # 10
+# print(x + 'шесть')  # TypeError: справа от знака "+" непонятный текст. Если что, я понимаю текстом цифры с 1 по 5.
+# print(x + 'a')  # TypeError: справа от знака "+" непонятный текст. Если что, я понимаю текстом цифры с 1 по 5.
+# print(x + (1,))  # TypeError: unsupported operand type(s) for +: 'Int' and 'tuple'
